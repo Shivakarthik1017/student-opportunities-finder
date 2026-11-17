@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Opportunities Finder — Learn With Shivakarthik</title>
+  <meta name="description" content="Jobs, internships, scholarships and free courses for Indian students — in one place, with deadlines, eligibility and verified apply links.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <p class="brand">🎓 Learn With Shivakarthik</p>
+      <h1>Student Opportunities Finder</h1>
+      <p class="tagline">Jobs, internships, scholarships &amp; free courses for Indian students — in one place. No more missed deadlines.</p>
+      <div class="stats" id="stats" aria-live="polite"></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="controls" aria-label="Search and filter opportunities">
+      <label class="search-label" for="search">Search</label>
+      <input id="search" type="search" placeholder="Search by role, company, keyword… e.g. Google, scholarship, AI" autocomplete="off">
+
+      <div class="filter-row">
+        <label for="typeFilter">Type</label>
+        <select id="typeFilter">
+          <option value="all">All types</option>
+          <option value="Job">Job</option>
+          <option value="Internship">Internship</option>
+          <option value="Scholarship">Scholarship</option>
+          <option value="Free Course">Free Course</option>
+          <option value="Coding Contest">Coding Contest</option>
+        </select>
+
+        <label for="deadlineFilter">Deadline</label>
+        <select id="deadlineFilter">
+          <option value="all">Any deadline</option>
+          <option value="7">Closing in 7 days</option>
+          <option value="30">Closing in 30 days</option>
+          <option value="none">No deadline published</option>
+        </select>
+
+        <label for="sortBy">Sort</label>
+        <select id="sortBy">
+          <option value="deadline">Deadline: soonest first</option>
+          <option value="az">Name: A–Z</option>
+        </select>
+      </div>
+
+      <div class="chips" id="typeChips" role="group" aria-label="Quick filter by type">
+        <button type="button" data-type="all" class="chip active">All</button>
+        <button type="button" data-type="Job" class="chip">Jobs</button>
+        <button type="button" data-type="Internship" class="chip">Internships</button>
+        <button type="button" data-type="Scholarship" class="chip">Scholarships</button>
+        <button type="button" data-type="Free Course" class="chip">Free Courses</button>
+        <button type="button" data-type="Coding Contest" class="chip">Contests</button>
+      </div>
+    </section>
+
+    <p class="notice">
+      ⚠️ <strong>Always check the official link before applying.</strong>
+      Deadlines and amounts below are from research on 17 Nov 2026 and can change.
+      We never list a paid course as free, and we never invent a salary, stipend or deadline.
+    </p>
+
+    <section aria-label="Opportunities">
+      <p id="resultCount" class="result-count" aria-live="polite"></p>
+      <div id="cards" class="cards"></div>
+      <p id="emptyState" class="empty" hidden>No opportunities match your search. Try a different keyword or clear the filters.</p>
+    </section>
+
+    <section class="about">
+      <h2>Why this exists</h2>
+      <p>Student jobs, internships, scholarships and free courses are scattered across many sites. Deadlines are missed, eligibility is unclear, and expired or paid links are mixed in with free ones.</p>
+      <ul>
+        <li><strong>One list, not ten tabs</strong> — every opportunity in one place.</li>
+        <li><strong>Deadlines first</strong> — sorted soonest first, with a days-left countdown.</li>
+        <li><strong>Eligibility up front</strong> — check if you can apply before you click.</li>
+        <li><strong>Free means free</strong> — paid exams and fees are flagged, never hidden.</li>
+        <li><strong>Verified links only</strong> — every Apply button goes to the official or source page.</li>
+      </ul>
+      <p class="data-note">
+        Data last checked: <strong>17 November 2026</strong>.
+        Not included on purpose: Amazon Future Engineer Scholarship (India) — applications are currently closed and reopen in 2027 — and TCS NQT, which is a paid test (fees from ₹599), not a free application.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>Learn With Shivakarthik</strong> — free career guidance for Indian students.</p>
+      <p>Free Career Guidance on WhatsApp: <a href="https://wa.me/919640971021">wa.me/919640971021</a></p>
+      <p class="small">Built by Pendyala Shivakarthik. Data from the research report of 17 Nov 2026 — see README.md for sources.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
